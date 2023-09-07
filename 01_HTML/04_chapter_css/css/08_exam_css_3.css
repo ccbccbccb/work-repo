@@ -1,0 +1,17 @@
+h2 {
+    color: black;
+    font-size: 25px;
+}
+li {
+    /*  ./ : 현재경로 */
+    /*  ../ : 상위경로 ( 부모경로 ) */
+    /* 이미지 가져오기 함수 : url ( 이미지경로 ) */
+    list-style-image: url( "/04_chapter_css/image/arrow.gif" );
+}
+span {
+    font-weight: bold;
+}
+p {
+    color: green;
+    text-decoration: underline;
+}

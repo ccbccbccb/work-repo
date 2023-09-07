@@ -1,0 +1,15 @@
+h3 {
+    color: black;
+}
+p {
+    color: green;
+    /* 글자 크기 */
+    /* font - size : 18px; */
+}
+span { 
+    color: blue;
+    /* 굵은 글씨 */
+    font-weight: bold;
+    /* 밑줄 */
+    text-decoration: underline;
+}

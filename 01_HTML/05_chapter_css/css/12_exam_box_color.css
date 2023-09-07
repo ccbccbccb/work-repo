@@ -1,0 +1,12 @@
+body {
+    background-color: yellow;
+}
+
+#button {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    padding-top: 10px;
+}

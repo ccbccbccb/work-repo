@@ -1,0 +1,16 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "cname": "홍길동",
+      "email": "hong@naver.com",
+      "phone": "010-1234-5678"
+    },
+    {
+      "cname": "전우츼",
+      "email": "jeon@neveeeeeeer.com",
+      "phone": "010-1234-1234",
+      "id": 2
+    }
+  ]
+}

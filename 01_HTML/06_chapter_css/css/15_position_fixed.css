@@ -1,0 +1,17 @@
+/* fixed (메뉴 고정으로 많이 사용) */
+/* 주의점 : 고정되면 아래 태그가 위로 말려 올라옴(본문과 겹침 현상) */
+/* 메뉴 */
+.top-bar {
+    height: 50px;
+    background-color: red;
+    /* 고정(fixed) */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+/* 본문 */
+.container {
+    margin-top: 50px;
+}

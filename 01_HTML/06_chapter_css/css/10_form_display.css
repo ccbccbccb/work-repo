@@ -1,0 +1,40 @@
+/* 주문 양식 css */
+/* 여백 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 목록 점 없애기 */
+ul {
+    list-style-type: none;
+}
+
+legend {
+    /* 1em(rem) == 16px (반응형 웹 디자인 요소) */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+fieldset {
+    /* 외곽선 */
+    border: 1px solid lightgray;
+    /* 바깥여백 - 아래쪽 */
+    margin-bottom: 35px;
+    /* 안쪽여백(축약형) : 상 우 하 좌(시계방향) */
+    padding: 30px 20px 30px 30px;
+}
+
+form {
+    /* 가로 */
+    width: 520px;
+    /* 세로 : auto : 안에 컨텐츠 내용물만큼 자동 증가(자식요소만큼 자동증가) */
+    height: auto;
+    /* 안쪽 여백 - 왼쪽 */
+    padding-left: 10px;
+    /* TODO: 중앙 정렬 (div 등) */
+    /* 바깥여백 : 좌/우 상/하 */
+    /* 사용법 : margin: 숫자px auto */
+    margin: 50px auto;
+}

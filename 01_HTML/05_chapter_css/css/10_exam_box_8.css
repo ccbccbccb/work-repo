@@ -1,0 +1,20 @@
+/* 문제 풀이 : 예제 (모든 태그에 박스 적용하기) */
+body {
+  border: 1px solid orange;
+}
+
+h3 {
+  border: 1px solid blue;
+}
+
+p {
+  border: 1px solid green;
+}
+
+ul {
+  border: 1px solid red;
+}
+
+li {
+  border: 1px solid blue;
+}

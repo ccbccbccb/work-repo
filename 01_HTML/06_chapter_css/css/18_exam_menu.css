@@ -1,0 +1,35 @@
+/* 문제 풀이 */
+/* 여백 초기화 */
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+#logo {
+  float: left;
+  margin: 20px;
+  border: 1px solid red;
+}
+#top {
+  float: right;
+  margin-right: 20px;
+  margin-top: 30px;
+  border: 1px solid red;
+}
+#menu {
+  /* float 영향 제거 */
+  clear: both;
+  background-color: midnightblue;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+#menu li {
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px 15px 0 15px;
+  font-weight: lighter;
+}

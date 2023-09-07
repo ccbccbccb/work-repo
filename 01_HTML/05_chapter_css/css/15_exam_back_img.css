@@ -1,0 +1,25 @@
+body {
+background-image: url("/05_chapter_css/image/card.jpg");
+background-repeat: no-repeat;
+background-position: 0% 0px;
+background-size: 50vw 50vh;
+}
+
+p {
+font-size: 12px;
+margin: 100px 0 0 60px;
+width: 160px;
+text-align: center;
+
+}
+
+div {
+background-color: blue;
+color: white;
+width: 90px;
+font-size: 11px;
+text-align: center;    
+margin: 20px 0 0 100px;
+padding: 5px 0 0 0;
+height: 20px;
+}

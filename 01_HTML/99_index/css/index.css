@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&family=Merienda:wght@300&family=Moirai+One&family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+#container {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+#header {
+  height: 120px;
+  background-image: url("/99_index/img/forest.png");
+}
+
+#title {
+  font-size: 40px;
+  margin: 0px 0 0 40px;
+  color: beige;
+}
+
+#h_menu li {
+  display: inline-block;
+}
+
+.menus {
+  color: white;
+  margin-left: 20px;
+  margin-right: 30px;
+  font-size: 20px;
+  float: right;
+}
+
+#sidebar {
+  width: 300px;
+  height: 600px;
+  float: left;
+}
+
+#sub_menu {
+  margin: 20px;
+}
+
+.sub_menus {
+  border-bottom: 1px dotted black;
+  padding: 10px;
+}
+
+#contents {
+  width: 900px;
+  height: 600px;
+  background-image: url("/99_index/img/background.png");
+  float: right;
+}
+
+#content_title {
+  margin: 30px;
+}
+
+#main_contents {
+  float: right;
+  width: 880px;
+  margin-top: 25px;
+}
+
+.picture {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  left: 20px;
+  top: 020px;
+}
+
+#footer {
+  clear: both;
+  height: 100px;
+  /* 임시 */
+  background-color: #2c2a29;
+}
+
+#info {
+  color: aliceblue;
+  float: right;
+  margin-right: 50px;
+  margin-top: 30px;
+}

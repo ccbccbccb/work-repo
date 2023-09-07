@@ -1,0 +1,58 @@
+.contents {
+    width: 1000px;
+    /* margin: 상하 auto */
+    margin: 50px auto;
+}
+
+main > section {
+    margin-top: 60px;
+}
+
+.detail p {
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.detail > img {
+    float: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+/* 여백들 추가 */
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+/* 이미지(왼쪽) + 상세설명(글) */
+main div {
+    margin-top: 20px;
+}
+
+/* main : 소제목 */
+main h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* 기타 등등 */
+/* main - 상세 일정 */
+.schedule h3 {
+    font-size: 1.2em;
+}
+
+/* main - 상세일정(li) */
+.schedule ul li {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 열병합  -->
+    <!-- 사용법 : <td colspan="병합할개수">내용</td>  -->
+    <!-- 힌트 : <input type="file"> -->
+    <!-- 테이블 : 6행 2열 -->
+    <table border="1">
+      <!-- 1행 : 열병합 -->
+      <tr>
+        <!-- 1열 -->
+        <td colspan="2">글쓰기 게시판</td>
+      </tr>
+      <!-- 2행 -->
+      <tr>
+        <!-- 1열 -->
+        <td>
+            <label for="">제목</label> 
+        </td>
+        <!-- 2열 -->
+        <td>
+            <!-- 입력양식 -->
+            <input type="text">
+        </td>
+      </tr>
+      <!-- 3행 : 긴글 쓰기 -->
+      <tr>
+        <!-- 1열 -->
+        <td> <label for="">내용</label> </td>
+        <!-- 2열 -->
+        <td>
+            <textarea cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+      <!-- 4행 : 파일첨부 입력양식 -->
+      <tr>
+        <!-- 1열 -->
+        <td> 
+            <label for="">파일첨부</label> 
+        </td>
+        <!-- 2열 -->
+        <td>
+            <input type="file">
+        </td>
+      </tr>
+      <!-- 5행 -->
+      <tr>
+        <!-- 1열 -->
+        <td></td>
+        <!-- 2열 -->
+        <td>5M 이하의 파일만 첨부 가능합니다.</td>
+      </tr>
+      <!-- 6행 : 열병합 2개 -->
+      <tr>
+        <!-- 1열 -->
+        <td colspan="2">
+            <!-- <input type="button" value="확인"/> -->
+            <!-- 2nd 방법 : 버튼 -->
+            <button>확인</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* 같은 선택자일 경우(기본) : 디자인 적용 우선순위 -> 밑으로 갈수록 우선됨 */
+table {
+  border: 1px solid plum;
+  /* 테이블 선사이 간격 붙이기 속성 */
+  border-collapse: collapse;
+  text-align: center;
+  /* 가로 크기 */
+  /* 화면단위 : px(고정크기), %(반응형단위)
+            , vw(가로, viewport width), vh(세로, viewport height) */
+  /* viewport : 모니터의 화면(pc 모니터에 맞추어 보임, 테이블에 맞추어 보임) */
+  /* 예) 코딩시 100vw(가로) -> pc, 테블릿 등에서 적절하게 화면을 맞추어 줌 */
+  width: 610px;
+  height: 100px;
+}
+#table_title {
+  border: 1px solid plum;
+  background-color: lightcyan;
+  padding: 5px;
+  height: 30px;
+}
+th {
+  border: 1px solid plum;
+  padding: 5px;
+}
+td {
+  border: 1px solid plum;
+  padding: 5px;
+}
+.train {
+  background-color: #fbdbf2;
+  text-decoration: underline;
+  color: palevioletred;
+  font-weight: bold;
+}
+#col1 ,#col4 {
+  width: 90px;
+}
+#col2,#col3 {
+  width: 60px;
+}
+#col5,#col6 {
+  width: 80px;
+}
+

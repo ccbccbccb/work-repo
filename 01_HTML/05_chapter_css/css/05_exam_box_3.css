@@ -1,0 +1,6 @@
+h3 {
+    border: 5px solid brown;
+    padding: 10px;
+    /* 가로 크기 : 고정크기(px) */
+    width: 400px;
+}
