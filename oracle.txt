@@ -1,0 +1,4 @@
+Oracle SID    : free
+Pluggable DB  : freepdb1
+
+ALL PASSWORDS ARE : oracle
