@@ -4,29 +4,12 @@ import { useEffect, useState } from "react";
 
 function App() {
   let post = "강남 우동 맛집";
-  let [글제목, 글제목변경] = useState([
-    {
-      tit : "남자코트 추천"
-    },
-    {
-      tit : "강남 우동맛집"
-    },
-    {
-      tit : "파이썬 독학"
-    }
-  ]);
+  let [글제목, 글제목변경] = useState(["남자코트 추천", "강남 우동맛집", "파이썬 독학"]);
   let [따봉, 따봉변경] = useState([0, 0, 0]);
   let [modal, setModal] = useState(false);
   let [title, setTitle] = useState(0);
-  let [입력값, 입력값변경] = useState([
-    {tit : ''}
-  ]);
+  let [입력값, 입력값변경] = useState('');
 
-  const onChange1 = (e) => {
-    let attrValue = e.target.value
-    let attrTit = e.target.tit;
-    글제목변경({...글제목,[attrTit] : attrValue})
-  }
 
   
 
@@ -59,6 +42,7 @@ function App() {
   // 파라미터에 e(event)입력
 
   // 참고) state 변경함수는 늦게처리됨(비동기처리)
+  // 참고) 새로고침시 입력값 등 없어지는 이유? = 새로고침시 브라우저가 html, js 파일을 다시 읽음
 
   return (
     <div className="App">
@@ -87,10 +71,10 @@ function App() {
        <p>2월 17일 발행</p>
       </div> */}
 
-      {글제목.map(function (value, i) {
+      {글제목.map((a, i) => {
         return (
           <div className="list" key={i}>
-            <h4
+            <h4 
               onClick={() => {
                 if (modal == true) {
                   setModal(false);
@@ -100,7 +84,7 @@ function App() {
                 }
               }}
             >
-              {value.tit}{" "}
+              {글제목[i]}{" "}
             </h4>{" "}
             <span
               onClick={() => {
@@ -117,18 +101,37 @@ function App() {
           (이벤트가 상위요소로 퍼지는 현상(이벤트버블링))
            상위html로 퍼지는 이 현상을 막고싶으면 e.stopPropagation() */}
             <p>2월 17일 발행</p>
+            <button onClick={()=> {
+              let copy = [...글제목];
+              copy.splice(i,1);
+              글제목변경(copy);
+            }}>삭제</button>
           </div>
         );
       })}
 
-      <input onChange={onChange1}></input>
+      <input onChange={ (e) => {입력값변경(e.target.value)}}></input>
+      <button onClick={ () => {
+        if(입력값=='') {
+          alert('값이 입력되지 않았습니다.');
+        } else {
+        let copy = [...글제목];
+        copy.unshift(입력값);
+        글제목변경(copy);
+        let copy1 = [...따봉];
+        copy1.unshift(0);
+        따봉변경(copy1);
+        }
+
+      }}>글발행</button>
+
 
       {
         // 삼항연산자
         // 조건식 ? 참일떄 실행 할 코드 : 거짓일 때 실행할 코드
         // html 중간에 조건식 쓰려면 삼항연산자
         modal == true ? (
-          <Modal 글제목변경={글제목변경} 글제목={글제목} 글제목tit={글제목.tit} title={title} />
+          <Modal 글제목변경={글제목변경} 글제목={글제목} title={title} />
         ) : null // null은 비어있는 html용으로 자주 사용
       }
     </div>
@@ -138,7 +141,7 @@ function App() {
 function Modal(props) {
   return (
     <div className="modal">
-      <h4>{props.글제목[props.title].tit}</h4>
+      <h4>{props.글제목[props.title]}</h4>
       <p>날짜</p>
       <p>상세내용</p>
       <button>글수정</button>
