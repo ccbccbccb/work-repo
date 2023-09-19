@@ -5,6 +5,12 @@ import chap02.Sec0203;
 import chap02.Sec0204;
 import chap03.Sec0301;
 import chap03.Verify03;
+import chap04.Sec0401;
+import chap04.Sec0402;
+import chap04.Verify04;
+import chap05.Sec0501;
+import chap05.Sec0502;
+import chap05.Verify05;
 
 /**
  * packageName : PACKAGE_NAME
@@ -62,10 +68,60 @@ public class JavaApplication {
 //        sec0301.exam09();
 //        sec0301.exam10();
 
-        Verify03 verify03 = new Verify03();
-//        verify03.exam01();
-//        verify03.exam02();
-//        verify03.exam03();
+        /**
+         * 연습문제
+         */
+//        Verify03 verify03 = new Verify03();
+////        verify03.exam01();
+////        verify03.exam02();  // 314.0
+////        verify03.exam03();
+
+        /**
+         * 섹션 4-1장 : 조건문
+         */
+//        Sec0401 sec0401 = new Sec0401();
+////        sec0401.exam01();
+////        sec0401.exam04();
+//        sec0401.exam08();
+
+        /**
+         * 4-2장 : 반복문
+         */
+//        Sec0402 sec0402 = new Sec0402();
+////        sec0402.exam01();
+////        sec0402.exam02();  // 5050
+////        sec0402.exam08();  // 5050
+////        sec0402.exam09();  // 5050
+//        sec0402.exam10();  // 5050
+
+        /**
+         * 4장 연습문제 : 조건문/반복문
+         */
+//        Verify04 verify04 = new Verify04();
+////        verify04.exam02();  // 1683
+////        verify04.exam03();
+////        verify04.exam04();
+//        verify04.exam05();
+
+        /**
+         * 5장 자바 메모리
+         */
+//        Sec0501 sec0501 = new Sec0501();
+//        sec0501.stringEqualExam();
+
+        /**
+         * 5-2장 배열
+         */
+        Sec0502 sec0502 = new Sec0502();
+//        sec0502.getStudent();
+//        sec0502.arrayFunc();
+//        sec0502.arrayTwo();
+//        sec0502.copyArray();
+//        sec0502.AdvancedExam();
+
+        Verify05 verify05 = new Verify05();
+//        verify05.exam04();
+        verify05.exam05();
 
     }
 }
