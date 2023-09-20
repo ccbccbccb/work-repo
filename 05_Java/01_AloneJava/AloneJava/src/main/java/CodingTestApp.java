@@ -14,8 +14,9 @@
 public class CodingTestApp {
     public static void main(String[] args) {
         CodingTest codingTest = new CodingTest();
-       int result = codingTest.solution(7, 20);
-        System.out.println(result);
+        //        TODO: 0901 유한소수 판별하기
+//       int result = codingTest.solution(7, 20);
+//        System.out.println(result);
 
     }
 }
