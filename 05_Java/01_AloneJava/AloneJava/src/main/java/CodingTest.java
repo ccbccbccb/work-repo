@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Objects;
+
 public class CodingTest {
 //    public static void main(String[] args) {
 
@@ -50,43 +53,132 @@ public class CodingTest {
 
     // TODO: 0902 겹치는 선분의 길이
 
-    public int solution(int[][] lines) {
-        int answer = 0;
-        if (lines[0][1] >= lines[1][0] && lines[0][0] >= lines[1][1]) {
-            if (lines[0][1] > lines[1][1]) {
-                answer = answer + (lines[1][1] - lines[0][0]);
-            } else if (lines[0][1] < lines[1][1]) {
-                answer = answer + (lines[0][1] - lines[1][0]);
-            } else if (lines[0][1] == lines[1][1]) {
-                answer = answer + (lines[0][1] - Math.max(lines[0][0], lines[1][0]));
-            }
-        }
-
-            if (lines[0][1] >= lines[2][0] && lines[0][0] >= lines[2][1]) {
-                if (lines[0][1] > lines[2][1]) {
-                    answer = answer + (lines[2][1] - lines[0][0]);
-                } else if (lines[0][1] < lines[2][1]) {
-                    answer = answer + (lines[0][1] - lines[2][0]);
-                } else if (lines[0][1] == lines[2][1]) {
-                    answer = answer + (lines[0][1] - Math.max(lines[0][0], lines[2][0]));
-                }
-            }
-
-                if (lines[1][1] >= lines[2][0] && lines[1][0] >= lines[2][1]) {
-                    if (lines[1][1] > lines[2][1]) {
-                        answer = answer + (lines[2][1] - lines[1][0]);
-                    } else if (lines[1][1] < lines[2][1]) {
-                        answer = answer + (lines[1][1] - lines[2][0]);
-                    } else if (lines[1][1] == lines[2][1]) {
-                        answer = answer + (lines[1][1] - Math.max(lines[1][0], lines[2][0]));
-                    }
-                }
-
-                    return answer;
-                }
+//    public int solution(int[][] lines) {
+//        int answer = 0;
+//        if (lines[0][1] >= lines[1][0] && lines[0][0] >= lines[1][1]) {
+//            if (lines[0][1] > lines[1][1]) {
+//                answer = answer + (lines[1][1] - lines[0][0]);
+//            } else if (lines[0][1] < lines[1][1]) {
+//                answer = answer + (lines[0][1] - lines[1][0]);
+//            } else if (lines[0][1] == lines[1][1]) {
+//                answer = answer + (lines[0][1] - Math.max(lines[0][0], lines[1][0]));
+//            }
+//        }
+//
+//            if (lines[0][1] >= lines[2][0] && lines[0][0] >= lines[2][1]) {
+//                if (lines[0][1] > lines[2][1]) {
+//                    answer = answer + (lines[2][1] - lines[0][0]);
+//                } else if (lines[0][1] < lines[2][1]) {
+//                    answer = answer + (lines[0][1] - lines[2][0]);
+//                } else if (lines[0][1] == lines[2][1]) {
+//                    answer = answer + (lines[0][1] - Math.max(lines[0][0], lines[2][0]));
+//                }
+//            }
+//
+//                if (lines[1][1] >= lines[2][0] && lines[1][0] >= lines[2][1]) {
+//                    if (lines[1][1] > lines[2][1]) {
+//                        answer = answer + (lines[2][1] - lines[1][0]);
+//                    } else if (lines[1][1] < lines[2][1]) {
+//                        answer = answer + (lines[1][1] - lines[2][0]);
+//                    } else if (lines[1][1] == lines[2][1]) {
+//                        answer = answer + (lines[1][1] - Math.max(lines[1][0], lines[2][0]));
+//                    }
+//                }
+//
+//                    return answer;
+//                }
 //    }
 //    }
-            }
+
+          // TODO: 1014 배열 자르기
+
+    public int[] solution(int[] numbers, int num1, int num2) {
+        int[] answer = Arrays.copyOfRange(numbers, num1, num2);
+        return answer;
+    }
+
+          // TODO: 1015 짝수의 합 (O)
+
+//    public int solution(int n) {
+//        int answer = 0;
+//        for (int i = 1; i <=  n ; i++) {
+//            if(i%2 == 0) {
+//                answer = answer + i;
+//            }
+//        }
+//        return answer;
+//    }
+
+         // TODO: 1016 양꼬치
+
+//    public int solution(int n, int k) {
+//        int answer = 0;
+//        answer = 12000 * n + 2000 * k;
+//        if(n>=10) {
+//            answer = answer - (n/10)*2000;
+//        }
+//        return answer;
+//    }
+    // TODO: 1017 각도기 (O)
+
+//    public int solution(int angle) {
+//        int answer = 0;
+//        if(angle<90&&angle>0){
+//            answer = 1;
+//        } else if(angle==90){
+//            answer = 2;
+//        } else if(angle<180&&angle>90){
+//            answer = 3;
+//        } else if(angle==180){
+//            answer = 4;
+//        }
+//        return answer;
+//    }
+
+     // TODO: 1018 특정 문자 제거하기 (O)
+
+//    public String solution(String my_string, String letter) {
+//        String answer = "";
+//        String [] my_string1 = my_string.split("");
+//        for (int i = 0; i < my_string1.length ; i++) {
+//            if(my_string1[i].charAt(0)==letter.charAt(0))
+//            {
+//                my_string1[i] = "";
+//            }
+//            answer = answer + my_string1[i];
+//        }
+//        return answer;
+//    }
+
+      // TODO: 1019 문자 반복 출력하기 (O)
+
+//    public String solution(String my_string, int n) {
+//        String answer = "";
+//        String [] my_string1 = my_string.split("");
+//        for (int i = 0; i < my_string1.length ; i++) {
+//            for (int j = 1; j <= n; j++) {
+//           answer = answer + my_string1[i];
+//            }
+//        }
+//        return answer;
+//    }
+
+      // TODO: 1020 짝수 홀수 개수 (O)
+
+//    public int[] solution(int[] num_list) {
+//        int[] answer = {0,0};
+//        for (int i = 0; i < num_list.length ; i++) {
+//            if(num_list[i]%2 == 0) {
+//                answer[0] = answer[0] + 1;
+//            } else if(num_list[i]%2 != 0) {
+//                answer[1] = answer[1] + 1;
+//            }
+//
+//        }
+//        return answer;
+//    }
+
+}
 
 
 
