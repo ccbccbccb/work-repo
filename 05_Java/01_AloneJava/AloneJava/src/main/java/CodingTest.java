@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class CodingTest {
 //    public static void main(String[] args) {
@@ -90,12 +91,65 @@ public class CodingTest {
 //    }
 //    }
 
-          // TODO: 1014 배열 자르기
+         // TODO: 1008 가위 바위 보
 
-    public int[] solution(int[] numbers, int num1, int num2) {
-        int[] answer = Arrays.copyOfRange(numbers, num1, num2);
-        return answer;
-    }
+//    public String solution(String rsp) {
+//        String
+//        String[] arr = rsp.split("");
+//
+//        for (int i = 0; i <arr.length ; i++) {
+//            if(Objects.equals(arr[i], "2")){
+//                answer.append("0");
+//            } else if (Objects.equals(arr[i], "0")) {
+//                answer.append("5");
+//            } else if (Objects.equals(arr[i], "5")) {
+//                answer.append("2");
+//            }
+//        }
+//        return answer;
+//    }
+
+         // TODO: 1010 개미 군단
+
+//    public int solution(int hp) {
+//        int answer = 0;
+//        if(hp>=5){
+//            answer = answer + hp/5;
+//            int q1 = hp%5;
+//            if(q1>=3){
+//                answer = answer + q1/3 + q1%3;
+//            } else if (q1<3) {
+//                answer = answer + q1;
+//            }
+//        } else if (hp>=3){
+//            answer = answer + hp/3 + hp%3;
+//        } else if(hp<3){
+//            answer = answer + hp;
+//        }
+//        return answer;
+//    }
+
+
+         // TODO: 1011 순서쌍의 개수 (O)
+
+//    public int solution(int n) {
+//        int answer = 0;
+//        for (int i = 1; i <= n; i++) {
+//           if((n%i)==0){
+//               answer++;
+//           }
+//        }
+//        return answer;
+//    }
+
+
+          // TODO: 1014 배열 자르기 (O)
+
+//    public int[] solution(int[] numbers, int num1, int num2) {
+//        int[] answer = new int[numbers.length];
+//        answer = Arrays.copyOfRange(numbers, num1,num2+1);
+//        return answer;
+//    }
 
           // TODO: 1015 짝수의 합 (O)
 
