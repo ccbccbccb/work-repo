@@ -109,7 +109,7 @@ public class CodingTest {
 //        return answer;
 //    }
 
-         // TODO: 1010 개미 군단
+         // TODO: 1010 개미 군단 (O)
 
 //    public int solution(int hp) {
 //        int answer = 0;
