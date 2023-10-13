@@ -10,6 +10,8 @@ import lombok.*;
  * date : 2023-10-12
  * description : 부서 클래스 == 부서 테이블 유사
  * 요약 :
+ *      vo(value Object) : 테이블과 동일하게 만듬
+ *      dto(Data Transfer Object) : 테이블 + 가공컬럼(속성)
  * <p>
  * ===========================================================
  * DATE            AUTHOR             NOTE
@@ -22,10 +24,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Dept extends BaseTimeEntity {
-//    DNO         NUMBER NOT NULL PRIMARY KEY,
-//    DNAME       VARCHAR2(255),
-//    LOC         VARCHAR2(255),
     private Integer dno; // 부서번호
     private String dname; // 부서명
-    private String loc; // 부서위치
+    private String loc;   // 부서위치
 }
