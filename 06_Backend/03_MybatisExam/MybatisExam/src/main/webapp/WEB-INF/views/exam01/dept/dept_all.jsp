@@ -59,36 +59,36 @@
     </table>
     <%--    todo: 테이블 반복문 끝--%>
 
-    <%--    todo: 페이지 번호 시작--%>
-    <div class="d-flex justify-content-center">
-        <ul class="pagination">
-            <%--                todo: 첫페이지 번호 --%>
-            <%--                 startPage : 1부터 시작 --%>
-            <%--                 currentPage : 0부터 시작--%>
-            <li class="page-item ${(startPage==1)? 'disabled': ''}">
-                <a class="page-link" href="/exam01/dept?page=${startPage-2}&size=${3}">Previous</a>
-            </li>
-            <%--                todo: 실제 페이지 번호들 --%>
-            <%--                  사용법 : <c:forEach var="data" begin="시작값" end="끝값">반복문</c:forEach>--%>
-            <c:forEach var="data" begin="${startPage}" end="${endPage}">
-                <li class="page-item ${(currentPage+1==data)? 'active': ''}">
-                    <a class="page-link" href="/exam01/dept?page=${data-1}&size=${3}">
-                            ${data}
-                    </a>
+<%--    todo: 페이지 번호 시작--%>
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+<%--                todo: 첫페이지 번호 --%>
+<%--                 startPage : 1부터 시작 --%>
+<%--                 currentPage : 0부터 시작--%>
+                <li class="page-item ${(startPage==1)? 'disabled': ''}">
+                    <a class="page-link" href="/exam01/dept?page=${startPage-2}&size=${3}">Previous</a>
                 </li>
-            </c:forEach>
-            <%--                todo: 끝페이지 번호--%>
-            <li class="page-item ${(endPage==totalPages)? 'disabled': ''}">
-                <a class="page-link" href="/exam01/dept?page=${endPage}&size=${3}">Next</a>
-            </li>
-        </ul>
-    </div>
-    <%--    todo: 페이지 번호 끝--%>
+<%--                todo: 실제 페이지 번호들 --%>
+<%--                  사용법 : <c:forEach var="data" begin="시작값" end="끝값">반복문</c:forEach>--%>
+                <c:forEach var="data" begin="${startPage}" end="${endPage}">
+                    <li class="page-item ${(currentPage+1==data)? 'active': ''}">
+                        <a class="page-link" href="/exam01/dept?page=${data-1}&size=${3}">
+                                ${data}
+                        </a>
+                    </li>
+                </c:forEach>
+<%--                todo: 끝페이지 번호--%>
+                <li class="page-item ${(endPage==totalPages)? 'disabled': ''}">
+                    <a class="page-link" href="/exam01/dept?page=${endPage}&size=${3}">Next</a>
+                </li>
+            </ul>
+        </div>
+<%--    todo: 페이지 번호 끝--%>
 
-    <%--    todo: Add 버튼 추가 --%>
-    <div class="text-center">
-        <a href="/exam01/dept/addition" class="btn btn-primary center">Add</a>
-    </div>
+<%--    todo: Add 버튼 추가 --%>
+        <div class="text-center">
+            <a href="/exam01/dept/addition" class="btn btn-primary center">Add</a>
+        </div>
 </div>
 
 <script>

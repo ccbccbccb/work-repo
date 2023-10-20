@@ -22,7 +22,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Emp extends BaseTimeEntity {
-    //  todo: 단축키 : ctrl + shift + u(대/소문자 바꾸기)
+//  todo: 단축키 : ctrl + shift + u(대/소문자 바꾸기)
     private Integer eno;
     private String ename;
     private String job;

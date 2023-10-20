@@ -4,7 +4,8 @@ import com.example.mybatisexam.model.common.PageReq;
 import com.example.mybatisexam.model.common.PageRes;
 import com.example.mybatisexam.model.vo.Dept;
 import com.example.mybatisexam.model.vo.Emp;
-import com.example.mybatisexam.service.exam01.EmpService;
+import com.example.mybatisexam.service.exam02.EmpService;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -68,18 +69,18 @@ public class EmpController {
     /** 상세조회 */
     @GetMapping("/emp/{eno}")
     public String getEmpId(@PathVariable int eno,
-                            Model model
-    ) {
-//      서비스 상세조회 함수 호출
+                           Model model
+                           ) {
+//      서비스 상세 조회 함수 호출
         Optional<Emp> optionalEmp = empService.findById(eno);
         model.addAttribute("emp", optionalEmp.get());
 
         return "exam01/emp/emp_id.jsp";
     }
 
-    /** 저장함수 : 저장 페이지로 이동 */
+    /** 저장함수 : 사원 추가 페이지 이동 */
     @GetMapping("/emp/addition")
-    public String addEmp(){
+    public String addEmp() {
         return "exam01/emp/add_emp.jsp";
     }
 
@@ -94,9 +95,9 @@ public class EmpController {
         return new RedirectView("/exam01/emp");
     }
 
-    /** 수정함수 : 수정 페이지로 이동 + 상세조회(1건조회) */
+    /** 수정함수 : 수정페이지로 이동 + 상세조회 */
     @GetMapping("/emp/edition/{eno}")
-    public String editDept(@PathVariable int eno,
+    public String editEmp(@PathVariable int eno,
                            Model model
     ) {
 //      서비스 상세조회 함수 호출
@@ -106,13 +107,13 @@ public class EmpController {
         return "exam01/emp/update_emp.jsp";
     }
 
-
     /** 수정함수 : db 수정 저장 */
     @PutMapping("/emp/edit/{eno}")
     public RedirectView updateEmp(@PathVariable int eno,
                                    @ModelAttribute Emp emp
     ) {
         empService.save(emp); // db 수정 저장
+
 //      전체 조회 페이지로 강제 이동
         return new RedirectView("/exam01/emp");
     }
@@ -124,4 +125,5 @@ public class EmpController {
 
         return new RedirectView("/exam01/emp");
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.mybatisexam.service.exam01;
+package com.example.mybatisexam.service.exam02;
 
 import com.example.mybatisexam.dao.EmpDao;
 import com.example.mybatisexam.model.common.PageReq;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * packageName : com.example.mybatisexam.service.exam01
+ * packageName : com.example.mybatisexam.service.exam02
  * fileName : EmpService
  * author : GGG
  * date : 2023-10-13
@@ -54,30 +54,32 @@ public class EmpService {
 
     /** 상세조회 */
     public Optional<Emp> findById(int eno) {
-        Optional<Emp> optinalEmp = empDao.findById(eno);
+//        db 상세조회 호출
+        Optional<Emp> optionalEmp = empDao.findById(eno);
 
-        return optinalEmp;
+        return optionalEmp;
     }
 
-    /** 저장함수 : dml ( 트랜잭션을 동반: 테이블에 값을 수정/삭제/넣는 행위 ) */
+    /** 저장함수 */
     public int save(Emp emp) {
         int queryResult = -1; // 저장된 건수를 위한 변수
 
         try {
-//          todo: 기본키(eno) 없으면 insert
-            if(emp.getEno() == null){
+//          todo: 기본키가 없으면 insert
+            if(emp.getEno() == null) {
                 queryResult = empDao.insert(emp);
             } else {
-//          todo: 기본키(eno) 있으면 update
+//          todo: 기본키가 있으면 update
                 queryResult = empDao.update(emp);
             }
+
         } catch (Exception e) {
             log.debug(e.getMessage());
         }
         return queryResult;
     }
 
-    /** 삭제함수 dml 함수 : 에러처리 */
+    /** 삭제함수 */
     public boolean removeById(int eno) {
         try {
             if(empDao.existById(eno) > 0) {
@@ -88,6 +90,31 @@ public class EmpService {
             log.debug(e.getMessage());
         }
         return false;
+    }
+
+    /** todo: dynamic sql 조회 */
+    public PageRes<Emp> findByDynamicContaining(
+            String ename,
+            String job,
+            Integer manager,
+            PageReq pageReq
+    ) {
+//        todo: dynamic 조회 (like 됨)
+        List<Emp> list = empDao.findByDynamicContaining(ename, job, manager,
+                pageReq);
+
+//        todo: 페이징 처리 로직
+//         1) 총 테이블 개수 :
+        long totalCount = empDao.countByDynamic(ename, job, manager);
+//        todo: 생성자 페이지 결과 객체(PageRes) => jsp 로 페이징 정보를 주기위해 코딩함
+        PageRes pageRes = new PageRes(
+                list,              // 검색 결과(부서) 배열
+                pageReq.getPage(), // 현재 페이지 번호
+                totalCount,        // 총 테이블 건수
+                pageReq.getSize()  // 1페이지당 개수
+        );
+
+        return pageRes;
     }
 
 }

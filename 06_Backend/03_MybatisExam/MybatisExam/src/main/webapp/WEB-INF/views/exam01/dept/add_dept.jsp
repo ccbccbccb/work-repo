@@ -13,17 +13,17 @@
 <jsp:include page="../../common/header.jsp" />
 <%--  header 끝 --%>
 
-
 <div class="container mt-5">
 
     <div>
+<%--     todo: /exam01/dept/add 해당되는 컨트롤러 함수 실행   --%>
         <form action="/exam01/dept/add" method="post">
-            <%--            todo: 부서명 --%>
+<%--         todo: 부서명   --%>
             <div class="mb-3">
                 <label for="dname" class="form-label">부서 이름</label>
                 <input type="text" class="form-control" id="dname" required name="dname">
             </div>
-            <%--            todo: 부서위치 --%>
+<%--         todo: 부서위치 --%>
             <div class="mb-3">
                 <label for="loc" class="form-label">부서 위치</label>
                 <input type="text" class="form-control" id="loc" required name="loc">

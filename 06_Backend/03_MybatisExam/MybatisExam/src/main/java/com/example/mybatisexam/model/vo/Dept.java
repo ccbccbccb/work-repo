@@ -10,8 +10,8 @@ import lombok.*;
  * date : 2023-10-12
  * description : 부서 클래스 == 부서 테이블 유사
  * 요약 :
- *      vo(value Object) : 테이블과 동일하게 만듬
- *      dto(Data Transfer Object) : 테이블 + 가공컬럼(속성)
+ *       vo(Value Object) : 테이블과 동일하게 만듬
+ *       dto(Data Transfer Object) : 테이블 + 가공컬럼(속성)
  * <p>
  * ===========================================================
  * DATE            AUTHOR             NOTE

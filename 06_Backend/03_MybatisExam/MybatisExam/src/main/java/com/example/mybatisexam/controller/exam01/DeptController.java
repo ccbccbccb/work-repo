@@ -40,10 +40,10 @@ public class DeptController {
     @GetMapping("/dept")
     public String getDeptAll(
             @RequestParam(defaultValue = "") String dname
-            , @RequestParam(defaultValue = "0") int page
-            , @RequestParam(defaultValue = "3") int size
-            , Model model
-    ){
+        , @RequestParam(defaultValue = "0") int page
+        , @RequestParam(defaultValue = "3") int size
+        , Model model
+            ){
 //      todo: 페이징 요청 객체에 정보 저장
 //        page : 현재페이지 번호, size : 1 페이지당 개수
         PageReq pageReq = new PageReq(page, size);
@@ -68,7 +68,7 @@ public class DeptController {
     @GetMapping("/dept/{dno}")
     public String getDeptId(@PathVariable int dno,
                             Model model
-    ) {
+                            ) {
 //      서비스 상세조회 함수 호출
         Optional<Dept> optionalDept = deptService.findById(dno);
         model.addAttribute("dept", optionalDept.get());
@@ -97,7 +97,7 @@ public class DeptController {
     @GetMapping("/dept/edition/{dno}")
     public String editDept(@PathVariable int dno,
                            Model model
-    ) {
+                           ) {
 //      서비스 상세조회 함수 호출
         Optional<Dept> optionalDept = deptService.findById(dno);
 //      jsp 전달
@@ -110,7 +110,7 @@ public class DeptController {
     @PutMapping("/dept/edit/{dno}")
     public RedirectView updateDept(@PathVariable int dno,
                                    @ModelAttribute Dept dept
-    ) {
+                                   ) {
         log.debug("---------------start-------------------------------");
         deptService.save(dept); // db 수정 저장
         log.debug("---------------end-------------------------------");
@@ -126,5 +126,11 @@ public class DeptController {
 
         return new RedirectView("/exam01/dept");
     }
+
+
+//  todo: 연습 5) 부서 클래스를 참고하여 사원 삭제기능을 추가하세요
+//    empDao, emp.xml, EmpService, EmpController, update_emp.jsp 수정
+//             url : /emp/delete/{eno}
+//    redirect jsp : /exam01/emp
 
 }

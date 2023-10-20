@@ -18,7 +18,7 @@
 
     <div>
         <form action="/exam01/dept/edit/${dept.dno}" method="post">
-            <%--    TODO: springboot 에서 아래와 같이 hidden 값을 전송하면 :  put 방식으로 인식해서 연결해줌    --%>
+<%--    TODO: springboot 에서 아래와 같이 hidden 값을 전송하면 :  put 방식으로 인식해서 연결해줌    --%>
             <input type="hidden" name="_method" value="put"/>
 
             <input type="hidden" name="dno" value="${dept.dno}"/>
@@ -48,7 +48,7 @@
             </div>
         </form>
 
-        <%--        todo: 삭제 버튼 form --%>
+<%--        todo: 삭제 버튼 form --%>
         <form id="delete-form" action="/exam01/dept/delete/${dept.dno}" method="post">
             <%--    TODO: springboot 에서 아래와 같이 hidden 값을 전송하면 :  delete 방식으로 인식해서 연결해줌    --%>
             <input type="hidden" name="_method" value="delete"/>
